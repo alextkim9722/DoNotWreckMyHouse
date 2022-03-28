@@ -161,49 +161,114 @@ src
 
 ## Class Methods
 ### Data
-#### HostsRepository - INTERFACE
-* public List<Host> findAll()
-* public Host findByElement(String)
+#### HostsRepository_ - INTERFACE
+##### Methods:
+* [ ] public List<Host> findAll()
+* [ ] public Host findByElement(String)
 
-#### GuestsRepository - INTERFACE
-* public List<Guest> findAll()
-* public Host findByElement(String)
+#### GuestsRepository_ - INTERFACE
+##### Methods:
+* [ ] public List<Guest> findAll()
+* [ ] public Host findByElement(String)
 
-#### ReservationsRepository - INTERFACE
-* public List<Reservations> findByHost()
-* public Reservation addReservation(Reservation)
-* public boolean deleteReservation(Reservation)
-* public Reservation findById(Int)
+#### ReservationsRepository_ - INTERFACE
+##### Methods:
+* [ ] public List<Reservations> findByHost()
+* [ ] public Reservation addReservation(Reservation)
+* [ ] public boolean deleteReservation(Reservation)
+* [ ] public Reservation findById(Int)
 
-#### HostsFileRepository
-* public List<Host> findAll()
-* public Host findByElement(String)
-* public Forager deserialize()
+#### HostsFileRepository_
+##### Methods:
+* [ ] public List<Host> findAll()
+* [ ] public Host findByElement(String)
+* [ ] public Forager deserialize()
 
-#### GuestsFileRepository
-* public List<Guest> findAll()
-* public Host findByElement(String)
-* public Guest deserialize()
+#### GuestsFileRepository_
+##### Methods:
+* [ ] public List<Guest> findAll()
+* [ ] public Host findByElement(String)
+* [ ] public Guest deserialize()
 
-#### ReservationsFileRepository
-* public List<Reservations> findByHost()
-* public Reservation addReservation(Reservation)
-* public boolean deleteReservation(Reservation)
-* public Reservation findById(Int)
-* public String getHostReservations(String)
-* public void writeAll(List<Reservations>)
-* public String serialize(Reservation)
-* public Reservation deserialize(String[])
+#### ReservationsFileRepository_
+##### Methods:
+* [ ] public List<Reservations> findByHost()
+* [ ] public Reservation addReservation(Reservation)
+* [ ] public boolean deleteReservation(Reservation)
+* [ ] public Reservation findById(Int)
+* [ ] public String getHostReservations(String)
+* [ ] public void writeAll(List<Reservations>)
+* [ ] public String serialize(Reservation)
+* [ ] public Reservation deserialize(String[])
 
 ### Domain
-#### Response
-* public boolean isSuccess()
-* public List<Strings> getMessages()
-* public void addMessage(String)
+#### Response_
+##### Methods:
+* [ ] public boolean isSuccess()
+* [ ] public List<Strings> getMessages()
+* [ ] public void addMessage(String)
 
-#### Result
-* public T getPayload()
-* public void setPayload(T)
+#### Result_
+##### Methods:
+* [ ] public T getPayload()
+* [ ] public void setPayload(T)
 
-#### HostService
-* public Host findByElement(String)
+#### HostService_
+##### Methods:
+* [ ] public HostService(HostRepository)
+* [ ] public Host findByElement(String)
+* [ ] public String getID(Host)
+
+#### GuestService_
+##### Methods:
+* [ ] public GuestService(GuestRepository)
+* [ ] public Guest findByElement(String)
+
+#### ReservationService_
+##### Methods:
+* [ ] public ReservationService(ReservationsRepository)
+* [ ] public Result<Reservation> add(Reservation)
+* [ ] public List<Reservation> getReservations(String)
+* [ ] public Result<Reservation> getById(int)
+* [ ] public Result<Reservation> validations()
+* [ ] public Result<Reservation> validateNulls()
+* [ ] public Result<Reservation> validateOverlap()
+* [ ] public Result<Reservation> validateStart()
+
+### Model
+#### Host_
+##### Variables:
+* [ ] public String id
+* [ ] public String lastName
+* [ ] public String firstName
+* [ ] public String email
+* [ ] public String phoneNumber
+* [ ] public String address
+* [ ] public BigDecimal standardRate
+* [ ] public BigDecimal weeklyRate
+##### Methods:
+* [ ] getters and setters
+
+#### Guest_
+##### Variables:
+* [ ] public int id
+* [ ] public String lastName
+* [ ] public String firstName
+* [ ] public String email
+* [ ] public String phoneNumber
+* [ ] public String address
+##### Methods:
+* [ ] getters and setters
+
+#### Reservation_
+##### Variables:
+* [ ] public Host host
+* [ ] public Guest guest
+* [ ] public int id
+* [ ] public LocalDate start
+* [ ] public LocalDate end
+* [ ] public BigDecimal total
+##### Methods:
+* [ ] getters and setters
+* [ ] public void calculateTotal()
+
