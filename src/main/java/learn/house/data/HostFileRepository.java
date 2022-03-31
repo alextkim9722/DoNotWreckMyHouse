@@ -17,9 +17,9 @@ public class HostFileRepository implements HostRepository{
     private final String filePath;
     private int totalSize;
 
-    // public HostFileRepository(@Value("${hostFilePath}") String filePath) {this.filePath = filePath;}
+    public HostFileRepository(@Value("${hostFilePath}") String filePath) {this.filePath = filePath;}
 
-    public HostFileRepository(String filePath) {this.filePath = filePath;}
+    // public HostFileRepository(String filePath) {this.filePath = filePath;}
 
     @Override
     public List<Host> findAll() {
@@ -70,8 +70,8 @@ public class HostFileRepository implements HostRepository{
         host.setCity(data[5]);
         host.setState(data[6]);
         host.setPostal(Integer.parseInt(data[7]));
-        host.setStandardRate(new BigDecimal(Double.parseDouble(data[8])));
-        host.setWeeklyRate(new BigDecimal(Double.parseDouble(data[9])));
+        host.setStandardRate(new BigDecimal(data[8]));
+        host.setWeeklyRate(new BigDecimal(data[9]));
         return host;
     }
 }

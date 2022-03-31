@@ -1,6 +1,7 @@
 package learn.house.data;
 
 import learn.house.models.Guest;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
 import java.io.BufferedReader;
@@ -15,9 +16,9 @@ public class GuestFileRepository implements GuestRepository{
     private final String filePath;
     private int totalSize;
 
-    // public GuestFileRepository(@Value("${guestFilePath}") String filePath) {this.filePath = filePath;}
+    public GuestFileRepository(@Value("${guestFilePath}") String filePath) {this.filePath = filePath;}
 
-    public GuestFileRepository(String filePath) {this.filePath = filePath;}
+    //public GuestFileRepository(String filePath) {this.filePath = filePath;}
 
     @Override
     public List<Guest> findAll() {

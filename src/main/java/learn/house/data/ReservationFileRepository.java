@@ -4,6 +4,8 @@ import learn.house.models.Guest;
 import learn.house.models.Host;
 import learn.house.models.Reservation;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -13,6 +15,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class ReservationFileRepository implements ReservationRepository{
 
     private static final String HEADER = "id,start_date,end_date,guest_id,total";
@@ -20,15 +23,15 @@ public class ReservationFileRepository implements ReservationRepository{
     private final String directory;
     private int totalSize;
 
-    /*
     public ReservationFileRepository(@Value("${reservationFilePath}") String directory) {
         this.directory = directory;
     }
-     */
 
+    /*
     public ReservationFileRepository(String directory) {
         this.directory = directory;
     }
+    */
 
     @Override
     public List<Reservation> findByHost(Host host) {

@@ -66,9 +66,9 @@ public class Reservation {
             for(LocalDate beg = start;beg.isBefore(end);beg = beg.plusDays(1)) {
                 if(beg.get(ChronoField.DAY_OF_WEEK) == Calendar.SATURDAY ||
                         beg.get(ChronoField.DAY_OF_WEEK) == Calendar.SUNDAY) {
-                    temp.add(host.getWeeklyRate());
+                    temp = temp.add(host.getWeeklyRate());
                 } else {
-                    temp.add(host.getStandardRate());
+                    temp = temp.add(host.getStandardRate());
                 }
             }
 

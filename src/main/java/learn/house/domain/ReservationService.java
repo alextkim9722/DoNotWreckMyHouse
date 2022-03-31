@@ -3,11 +3,16 @@ package learn.house.domain;
 import learn.house.data.DataException;
 import learn.house.data.GuestRepository;
 import learn.house.data.ReservationRepository;
+import learn.house.models.Guest;
 import learn.house.models.Host;
 import learn.house.models.Reservation;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
+@Service
 public class ReservationService {
     private final ReservationRepository reservationRepository;
     private final GuestRepository guestRepository;
@@ -61,6 +66,32 @@ public class ReservationService {
         return reservationList;
     }
 
+    public List<Reservation> getReservationGuestList(Host host, Guest guest) {
+        return getReservations(host).stream()
+                .filter(s -> s.getGuest() != null)
+                .filter(s -> s.getGuest().getId() == guest.getId())
+                .collect(Collectors.toList());
+    }
+
+    public Result<Reservation> getReservation(int id, Host host, List<Reservation> reservationList) {
+        Result<Reservation> result = new Result<>();
+        boolean match = false;
+
+        for(Reservation reservation : reservationList) {
+            if(id == reservation.getId()) {
+                match = true;
+            }
+        }
+
+        if(!match) {
+            result.addErrorMessages("There is no reservation of those credentials");
+        } else {
+            result = getById(id, host);
+        }
+
+        return result;
+    }
+
     public Result<Reservation> delete(Reservation reservation) throws DataException{
         Result<Reservation> result = new Result<>();
 
@@ -72,13 +103,8 @@ public class ReservationService {
 
     public Result<Reservation> getById(int id, Host host) {
         Result<Reservation> result = new Result<>();
-        int formattedId = id - 1;
 
-        if(formattedId > reservationRepository.getTotalSize() - 1 || formattedId < 0) {
-            result.addErrorMessages("The id is out of bounds, please enter a valid id.");
-        } else {
-            result.setItem(reservationRepository.findById(formattedId, host));
-        }
+        result.setItem(reservationRepository.findById(id, host));
 
         if(result.getItem() == null) {
             result.addErrorMessages("The reservation you are looking for does not exist.");
