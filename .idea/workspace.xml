@@ -5,22 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="195147f4-1a7f-471b-bd3b-90aa22266876" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/learn/house/ui/ConsoleIO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/learn/house/ui/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/learn/house/ui/MainMenuOptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/learn/house/ui/View.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/final/reservations/b4f38829-c663-48fc-8bf3-7fca47a7ae70.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/final/reservations/3edda6bc-ab95-49a8-8962-d50b53f84b15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/final/reservations/3edda6bc-ab95-49a8-8962-d50b53f84b15.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/learn/house/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/house/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/learn/house/data/GuestFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/house/data/GuestFileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/learn/house/data/HostFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/house/data/HostFileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/learn/house/data/ReservationFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/house/data/ReservationFileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/learn/house/domain/GuestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/house/domain/GuestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/learn/house/domain/HostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/house/domain/HostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/learn/house/domain/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/house/domain/ReservationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/learn/house/models/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/house/models/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/learn/house/domain/ReservationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/learn/house/domain/ReservationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/learn/house/ui/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/house/ui/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/learn/house/ui/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/house/ui/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/learn/house/models/Reservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/learn/house/models/Reservation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/learn/house/ui/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/learn/house/ui/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/learn/house/ui/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/learn/house/ui/View.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

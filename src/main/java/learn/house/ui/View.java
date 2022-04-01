@@ -80,6 +80,9 @@ public class View {
     }
 
     public Reservation editReservation(Reservation reservation) {
+        if(reservation == null) {
+            return null;
+        }
         displayHeader(String.format("Editing Reservation %d", reservation.getId()));
         LocalDate start = consoleIO.readLocalDate("Start: ");
         LocalDate end = consoleIO.readLocalDate("End: ");
@@ -95,11 +98,6 @@ public class View {
         reservation.setEnd(end);
         reservation.setTotal();
         return reservation;
-    }
-
-    public int deleteReservation() {
-        displayHeader(MainMenuOptions.DELETE.getHeader());
-        return consoleIO.readInt("ID: ");
     }
 
     public boolean viewSummary(Reservation reservation) {
@@ -120,14 +118,14 @@ public class View {
         consoleIO.println(ex.getMessage());
     }
 
-    public void displayStatus(boolean success, String message) {
-        displayStatus(success, List.of(message));
-    }
-
     public void displayStatus(boolean success, List<String> messages) {
         displayHeader(success ? "Success" : "Error");
         for (String message : messages) {
             consoleIO.println(message);
         }
+    }
+
+    public void enterToContinue() {
+        consoleIO.readString("");
     }
 }

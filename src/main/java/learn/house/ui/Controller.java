@@ -69,6 +69,8 @@ public class Controller {
             List<Reservation> reservationList = reservationService.getReservations(host);
             view.viewReservations(view.formatReservations(reservationList));
         }
+
+        view.enterToContinue();
     }
 
     private void makeReservation() throws DataException{
@@ -90,7 +92,10 @@ public class Controller {
                 view.viewReservations(view.formatReservations(reservationList));
                 reservation = view.makeReservation(host, guest);
                 if(view.viewSummary(reservation)) {
-                    reservationService.addReservation(reservation);
+                    Result<Reservation> result = reservationService.addReservation(reservation);
+                    if(!result.isSuccessful()) {
+                        view.displayStatus(result.isSuccessful(), result.getMessages());
+                    }
                 }
             }
         }
@@ -98,6 +103,8 @@ public class Controller {
 
     private void editReservation() throws DataException{
         view.displayHeader(MainMenuOptions.EDIT.getHeader());
+        Result<Reservation> result = null;
+        Reservation reservation;
         int id;
 
         Result<Host> hostResult = hostService.findByElement(view.getIdentifier("host"));
@@ -116,17 +123,24 @@ public class Controller {
                 view.viewReservations(view.formatReservations(reservationList));
 
                 id = view.getReservationID();
-                Reservation reservation = view.editReservation(reservationService.getReservation(id, host, reservationList).getItem());
-
-                if(view.viewSummary(reservation)) {
-                    reservationService.editReservation(reservation);
+                result = reservationService.getReservation(id, host, reservationList);
+                if(result.isSuccessful()) {
+                    reservation = view.editReservation(result.getItem());
+                    if(view.viewSummary(reservation)) {
+                        result = reservationService.editReservation(reservation);
+                    }
                 }
+            }
+
+            if(!result.isSuccessful()) {
+                view.displayStatus(result.isSuccessful(), result.getMessages());
             }
         }
     }
 
     private void deleteReservation() throws DataException{
-        view.displayHeader(MainMenuOptions.EDIT.getHeader());
+        view.displayHeader(MainMenuOptions.DELETE.getHeader());
+        Result<Reservation> result = null;
         int id;
 
         Result<Host> hostResult = hostService.findByElement(view.getIdentifier("host"));
@@ -145,7 +159,13 @@ public class Controller {
                 view.viewReservations(view.formatReservations(reservationList));
 
                 id = view.getReservationID();
-                reservationService.delete(reservationService.getReservation(id, host, reservationList).getItem());
+                result = reservationService.getReservation(id, host, reservationList);
+                if(result.isSuccessful()) {
+                    result = reservationService.delete(result.getItem());
+                }
+            }
+            if (!result.isSuccessful()) {
+                view.displayStatus(result.isSuccessful(), result.getMessages());
             }
         }
     }
