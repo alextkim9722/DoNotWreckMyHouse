@@ -50,7 +50,7 @@ public class ReservationRepositoryDouble implements ReservationRepository{
 
     @Override
     public Reservation findById(int id, Host host) {
-        return reservationList.get(id);
+        return reservationList.get(id - 1);
     }
 
     @Override
