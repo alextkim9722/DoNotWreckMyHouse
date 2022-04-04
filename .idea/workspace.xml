@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="195147f4-1a7f-471b-bd3b-90aa22266876" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/learn/house/domain/GuestServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/final/reservations/3edda6bc-ab95-49a8-8962-d50b53f84b15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/final/reservations/3edda6bc-ab95-49a8-8962-d50b53f84b15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/learn/house/ui/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/house/ui/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/learn/house/data/GuestRepositoryDouble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/learn/house/data/GuestRepositoryDouble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/learn/house/data/HostRepositoryDouble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/learn/house/data/HostRepositoryDouble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/learn/house/ui/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/learn/house/ui/View.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +79,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GuestServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DoNotWreckMyHouse" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="learn.house.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="learn.house.domain" />
+      <option name="MAIN_CLASS_NAME" value="learn.house.domain.GuestServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HostServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DoNotWreckMyHouse" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="learn.house.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="learn.house.domain" />
+      <option name="MAIN_CLASS_NAME" value="learn.house.domain.HostServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ReservationServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DoNotWreckMyHouse" />
       <extension name="coverage">
@@ -88,43 +124,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReservationServiceTest.shouldDeleteReservation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DoNotWreckMyHouse" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="learn.house.domain.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="learn.house.domain" />
-      <option name="MAIN_CLASS_NAME" value="learn.house.domain.ReservationServiceTest" />
-      <option name="METHOD_NAME" value="shouldDeleteReservation" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="learn.house in DoNotWreckMyHouse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DoNotWreckMyHouse" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="learn.house.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="learn.house" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in DoNotWreckMyHouse" />
+        <item itemvalue="JUnit.HostServiceTest" />
+        <item itemvalue="JUnit.GuestServiceTest" />
         <item itemvalue="Application.App" />
         <item itemvalue="JUnit.ReservationServiceTest" />
-        <item itemvalue="JUnit.ReservationServiceTest.shouldDeleteReservation" />
-        <item itemvalue="JUnit.learn.house in DoNotWreckMyHouse" />
       </list>
     </recent_temporary>
   </component>
@@ -154,7 +160,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/DoNotWreckMyHouse$All_in_DoNotWreckMyHouse.ic" NAME="All in DoNotWreckMyHouse Coverage Results" MODIFIED="1648665587012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/DoNotWreckMyHouse$All_in_DoNotWreckMyHouse.ic" NAME="All in DoNotWreckMyHouse Coverage Results" MODIFIED="1649044764534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/DoNotWreckMyHouse$ReservationFileRepositoryTest.ic" NAME="ReservationFileRepositoryTest Coverage Results" MODIFIED="1648665563863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>learn.house.data.*</FILTER>
     </SUITE>

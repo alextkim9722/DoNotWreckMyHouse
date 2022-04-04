@@ -7,7 +7,9 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class View {
@@ -40,22 +42,28 @@ public class View {
     }
 
     public void viewReservations(List<String> reservations) {
-        for(String reservation : reservations) {
-            consoleIO.println(reservation);
+        if(reservations.isEmpty()) {
+            consoleIO.println("No Reservations");
+        }else {
+            for (String reservation : reservations) {
+                consoleIO.println(reservation);
+            }
         }
     }
 
     public List<String> formatReservations(List<Reservation>  reservations) {
+        List<Reservation> sortedReservations = reservations.stream()
+                .sorted((a, b) -> a.getStart().compareTo(b.getStart()))
+                .collect(Collectors.toList());
         List<String> formattedReservations = new ArrayList<>();
 
-        for(Reservation reservation : reservations) {
+        for(Reservation reservation : sortedReservations) {
             formattedReservations.add(
-                    String.format("ID: %2d, %s - %s, Guest: %s %s, Email: %s",
+                    String.format("ID: %2d || %s - %s || Guest: %-25s || Email: %s",
                             reservation.getId(),
                             reservation.getStart().toString(),
                             reservation.getEnd().toString(),
-                            reservation.getGuest().getLastName(),
-                            reservation.getGuest().getFirstName(),
+                            reservation.getGuest().getLastName() + " " + reservation.getGuest().getFirstName(),
                             reservation.getGuest().getEmail()
                             ));
         }
