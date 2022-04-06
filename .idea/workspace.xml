@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="195147f4-1a7f-471b-bd3b-90aa22266876" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/learn/house/domain/GuestServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/final/reservations/3edda6bc-ab95-49a8-8962-d50b53f84b15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/final/reservations/3edda6bc-ab95-49a8-8962-d50b53f84b15.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/learn/house/ui/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/house/ui/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/learn/house/data/GuestRepositoryDouble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/learn/house/data/GuestRepositoryDouble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/learn/house/data/HostRepositoryDouble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/learn/house/data/HostRepositoryDouble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/learn/house/ui/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/learn/house/ui/View.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +154,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/DoNotWreckMyHouse$All_in_DoNotWreckMyHouse.ic" NAME="All in DoNotWreckMyHouse Coverage Results" MODIFIED="1649044764534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/DoNotWreckMyHouse$All_in_DoNotWreckMyHouse.ic" NAME="All in DoNotWreckMyHouse Coverage Results" MODIFIED="1649045262581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/DoNotWreckMyHouse$ReservationFileRepositoryTest.ic" NAME="ReservationFileRepositoryTest Coverage Results" MODIFIED="1648665563863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>learn.house.data.*</FILTER>
     </SUITE>
